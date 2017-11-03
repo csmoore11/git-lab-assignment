@@ -23,6 +23,7 @@ To develop this application, you will need:
     * The `.travis.yml` file
     * The `git-assignment-tests.sh` file
     * Also note that you hopefully won't clobber these files as each task is given its own branch.
+<<<<<<< HEAD
 * The following git alias will make inspecting the logs much easier:
     * Configure the alias with the following command: `git config --global alias.lp 'log --oneline --graph --all'`
     * Use `git lp` to get a more useful and powerful log output. :)
@@ -42,6 +43,8 @@ The only exception to making up resolutions are:
 
 For these files, just make sure they are look the same as the ones on my repository. They will need to stay the same. If you end up clobbering one of them, just wget them from the links above and commit them back up again on your master branch and you should be good. (I won't grade you on how many times you add these back. As long as the test script works (and you haven't modified it), I'll be grading based on how many of the tasks you are able to complete.
 >>>>>>> parent of 5b7a450... Update task 1 now that we are using branches.
+=======
+>>>>>>> parent of f276151... add a suggestion to create a git logging alias.
 
 # Tasks
 ## TODO: task 1 may need to come last, since it kinda relies on master being the only branch from the password commit.
