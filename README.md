@@ -63,12 +63,6 @@ For these files, just make sure they are look the same as the ones on my reposit
 # Task 2:
 * Simple rebase...
 
-# Task 3:
-
-* checkout the commit with this message: "object caching on the client side!" and create the branch `task-3` from that commit.
-* push up the new `task-3` branch. This will require setting the upstream branch, but git will help you with the command to do that.
-
-
 # Git Resources:
 
 * How to remove a commit: https://www.clock.co.uk/insight/deleting-a-git-commit
