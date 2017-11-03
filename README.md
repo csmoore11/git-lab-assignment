@@ -1,26 +1,19 @@
-# Git Lab Assignment [![Build Status](https://travis-ci.org/slackboxster/git-lab-assignment.svg?branch=master)](https://travis-ci.org/slackboxster/git-lab-assignment)
+# Church Connect Mobile App [![Build Status](https://travis-ci.org/churchconnect/mobile-app.svg?branch=master)](https://travis-ci.org/churchconnect/mobile-app)
 
-This assignment will give you a chance to apply your git skills and stretch them a good deal. It is based on the [ChurchConnect Mobile App](https://github.com/churchconnect/mobile-app), but modified to challenge your skills.
+This is a javascript application built on the aurelia framework. We use cordova / phonegap to build the javascript into a native iOS / Android application.
 
-You will need to fork the repostory into your own github account, and clone it to your computer to accomplish the tasks.
+For instructions on how to build and deploy this application for a new church, see the `DEPLOYMENT.md` file.
 
-# Automated Grading
+## Development Requirements:
 
-The assignment consists of a series of tasks. After each task, you can run the tests "./git-assignment-tests.sh" to see if you have successfully completed that task. However, the project is also configured to allow automatically running the tests after each push using Travis CI. 
+To develop this application, you will need:
 
-In order to receive a grade for the assignment, you will need to set up a travis-ci build for your fork, and modify the build status badge to point to your travis build.
+* Node/NPM (node version 5.7.1 recommended). We recommend you install it using [nvm](https://github.com/creationix/nvm)
+* Aurelia CLI: `npm install -g aurelia-cli`
 
-To set up Travis CI for your repository:
-* Sign in to [Travis CI .org](https://travis-ci.org/auth) with your github account.
-* Once Travis has synchronized your GitHub repositories, go to your [Travis Profile Page]() and select the `git-lab-assignment` repository and enable it.
-* The repository already contains a .travis.yml file, so you don't need to worry about that.
-* Once you push up your first commit, you should be able to see travis working.
-* When you look at the page for your git-lab-assignment Travis build, you should see a build status badge that looks like the one at the top of this repository.
-    * Click on that build status badge
-    * Choose the master branch from the first dropdown.
-    * Choose Markdown from the second dropdown
-    * copy the code sample that results and replace the build status code in this file with the code from your travis account.
+## Setup
 
+<<<<<<< HEAD
 # Notes
 
 * If you encounter conflicts during any merges or rebases or anything else, just make up the resolution as best you can. Since you don't understand the code, it will be hard to accurately resolve the conflicts. But you're being graded on your git work, not the coding, so just make sure the git actions work out.
@@ -65,3 +58,28 @@ To set up Travis CI for your repository:
 
 * How to remove a commit: https://www.clock.co.uk/insight/deleting-a-git-commit
 * In depth on rebasing: https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+=======
+The full development stack requires the API, the app (this repo), and,  our UI components library. However, for most simple tasks, you may only need to modify the app. The app is flexible enough to allow you to only work on the pieces that you actually need to change at any given point in time.
+
+### The app (this repo)
+
+* install node dependencies: `npm install`
+* run the application locally (also watches files for changes): `npm run watch`
+
+### API (optional)
+
+You can develop against any running API by changing the `apiUrl` value in the `src/common-config.js` file. If you need to develop against a local API, review the installation instructions in the [API repository](https://bitbucket.org/sharptop/church-connect-api) and point the apiUrl at the local API instance.
+
+### UI Components (optional)
+
+* Aurelia UI Components contains a set of reusable components for this app. If adding a reusable component, add it to the UI components.
+* While the library is new, modifications to it will be frequent. As it matures, the need to locally develop on the UI components will diminish.
+* This is optional because the default setup of the app installs the UI components from bitbucket. The following instructions will change that.
+* Clone the [ui components library](https://bitbucket.org/sharptop/aurelia-ui-components). 
+* `npm install` to install its dependencies.
+* `npm link` to make the global install of this package use your working directory.
+* `npm run build` to build the library.
+* go back to the church-connect-app directory, and `npm link aurelia-ui-components` to tell the app to use your local version of the ui components.
+* When you make a change to the UI components, `npm run build`, then kill the `npm run watch` in the app, and restart it.
+
+>>>>>>> parent of 925eed4... Add the assignment and test script and corrected travis configuration
